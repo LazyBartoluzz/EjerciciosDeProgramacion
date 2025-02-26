@@ -1,0 +1,29 @@
+package demo;
+
+public class MainPrueba {
+
+	public static void main(String[] args) {
+		
+
+		Integer valor=80;
+		Integer valor2=2;
+		
+		Boolean bandPar=false;
+		
+		while (valor > valor2 ) {
+			System.out.println(valor + "   "+ valor2);
+			if (valor==valor2) {
+				bandPar=true;
+			}
+			valor2+=2;
+		}
+		
+		if (bandPar) {
+			System.out.println("es par");
+		} else {
+			System.out.println("no es par");
+		}
+		
+	}
+
+}

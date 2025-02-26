@@ -1,0 +1,61 @@
+package demo;
+
+import java.util.Scanner;
+
+public class Cajero {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		Double saldo =50000.0;
+		Double dineroIngresado;
+		
+		char tipoAccion;
+		
+		while (condition) {
+			
+			
+			System.out.println("""
+					1. Consutar el saldo disponible,
+					2. Ingresar el dinero,
+					3. Retirar dinero, 
+					4. Salir.
+					""");
+			
+			tipoAccion = sc.next().charAt(0);
+			
+			switch (tipoAccion) {
+			case  '1' -> {
+				
+				System.out.println(saldo);
+			}
+			case  '2' -> {
+				
+				dineroIngresado=sc.nextDouble();
+				saldo += dineroIngresado;
+			}
+			case  '3' -> {
+				
+				dineroIngresado=sc.nextDouble();
+				
+				if (saldo>0.0 && dineroIngresado <= saldo) {
+					
+				}
+				
+			}
+			case  '4' -> {
+				
+			}
+			case  '5' -> {
+				
+			}
+			
+			
+			
+			}
+			
+		}
+		
+	}
+}

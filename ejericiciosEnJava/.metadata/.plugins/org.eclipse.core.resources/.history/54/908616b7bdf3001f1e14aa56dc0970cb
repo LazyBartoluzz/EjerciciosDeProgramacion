@@ -1,0 +1,67 @@
+package demo;
+
+import java.util.Scanner;
+
+public class MaquinaExpendedora {
+
+	public static void main(String[] args) {
+
+		
+		Scanner sc;
+		
+		String[]nombreProductos; 
+		Integer[] precioProductos;
+		Integer saldoUsuario;
+		
+		char opcionUsuario;
+		
+		sc = new Scanner(System.in);
+		
+		nombreProductos=new String[] { 
+				"Galleta Ships","Gansito","Coca cola","Chocolatina Jet","Chetos"
+		};
+		
+		precioProductos=new Integer[] {
+			2500,2700,3400,1300,3000	
+		};
+		
+		System.out.println("\tMáquina Expendedora de Snacks y Bebidas");
+		System.out.print("Ingrese el saldo que tiene: ");
+		saldoUsuario=sc.nextInt();
+		
+		do {
+		
+			System.out.println("Listado de los productos disponibles");
+			for (int i = 0; i < precioProductos.length; i++) {
+				
+				System.out.print((i+1));
+				System.out.print(". Descripción: ");
+				System.out.print(nombreProductos[i]);
+				System.out.print(", Precio: ");
+				System.out.println(precioProductos[i]);
+			}
+			
+			System.out.println("""
+					OPCIONES DEL USUARIO
+					1. Comprar productos,
+					2. Salir.
+					""");
+			
+			opcionUsuario = sc.next().charAt(0);
+			
+			if (opcionUsuario=='1') {
+				
+					System.out.print("Ingrese el # del producto: ");
+					
+					precioProductos[ sc.nextInt()-1 ];
+					
+				
+				}
+				
+			}
+			
+		} while (opcionUsuario=='1');
+		
+		sc.close();
+	}
+}

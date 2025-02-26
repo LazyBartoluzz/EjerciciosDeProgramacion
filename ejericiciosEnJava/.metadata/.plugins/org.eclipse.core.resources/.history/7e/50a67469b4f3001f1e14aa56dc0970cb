@@ -1,0 +1,153 @@
+package demo;
+
+import java.util.Scanner;
+
+public class CalculadorDeTemperatura {
+
+	public static void main(String[] args) {
+
+		/**
+		 * 
+		 * 
+		 * celsius = c fehrenheit = f kelvin = k rankine = r reaumur = u
+		 * 
+		 */
+
+		char unidadDeMedida;
+
+		unidadDeMedida = 'c';
+
+		Double valor;
+
+		valor = 0.0;
+
+		Integer tipoDeFormula;
+
+		Scanner sc = new Scanner(System.in);
+
+		while (unidadDeMedida!='x') {
+
+			System.out.print("De ");
+			System.out.print(valor);
+			switch (unidadDeMedida) {
+			case 'c' -> System.out.print("Celsius");
+			case 'f' -> System.out.print("Fehrenheit");
+			case 'k' -> System.out.print("kelvin");
+			case 'r' -> System.out.print("Rankine");
+			case 'u' -> System.out.print("Reaumur");
+			}
+			System.out.println(" a ...");
+			
+			switch (unidadDeMedida) {
+			case 'c' -> {
+
+				System.out.println("""
+						1. Fahrenheit,
+						2. Kelvin,
+						3. Rankine,
+						4. Réaumur
+						""");
+
+				tipoDeFormula = sc.nextInt();
+				switch (tipoDeFormula) {
+				case 1 -> {
+
+					valor = ((9 * valor) / 5) + 32;
+					unidadDeMedida = 'f';
+				}
+				case 2 -> {
+
+					valor = valor + 273.15;
+					unidadDeMedida = 'k';
+				}
+				case 3 -> {
+
+					valor = ((9 * valor) / 5) + 491.67;
+					unidadDeMedida = 'r';
+				}
+				case 4 -> {
+					valor = (4 * valor) / 5;
+					unidadDeMedida = 'u';
+				}
+
+				}
+
+			}
+			case 'f' -> {
+								
+				System.out.println("""
+						1. Celsius,
+						2. Kelvin,
+						3. Rankine,
+						4. Réaumur
+						""");
+
+				tipoDeFormula = sc.nextInt();
+				switch (tipoDeFormula) {
+				case 1 -> {
+
+					valor = ( 5 * (valor - 32)) / 9 ;
+					unidadDeMedida = 'c'; 
+				}
+				case 2 -> {
+
+					valor = (  ( 5 * (valor - 32)) / 9  ) + 273.15 ;
+					unidadDeMedida = 'k';
+				}
+				case 3 -> {
+
+					valor = valor + 459.67;
+					unidadDeMedida = 'r';
+				}
+				case 4 -> {
+					valor = ( 4 * (valor - 32)) / 9 ;
+					unidadDeMedida = 'u';//ACA;
+				}
+				}
+				
+			}
+			case 'k' -> {
+				
+				//---------------kelvin a..
+				System.out.println("""
+						1. Celsius,
+						2. Fahrenheit,
+						3. Rankine,
+						""");
+
+				tipoDeFormula = sc.nextInt();
+				switch (tipoDeFormula) {
+				case 1 -> {
+
+					valor = ( 5 * (valor - 32)) / 9 ;
+					unidadDeMedida = 'c'; 
+				}
+				case 2 -> {
+
+					valor = (  ( 5 * (valor - 32)) / 9  ) + 273.15 ;
+					unidadDeMedida = 'k';
+				}
+				case 3 -> {
+
+					valor = valor + 459.67;
+					unidadDeMedida = 'r';
+				}
+
+				}
+			
+				//------------
+				
+			}
+			case 'r' -> {
+
+			}
+			case 'u' -> {
+
+			}
+
+			}
+
+		}
+		sc.close();
+	}
+}

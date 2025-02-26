@@ -1,0 +1,94 @@
+package demo;
+
+import java.util.Scanner;
+
+public class CalculadorDeTemperatura {
+
+	public static void main(String[] args) {
+
+		/**
+		 * 
+		 * 
+		 * celsius = c fehrenheit = f kelvin = k rankine = r reaumur = u
+		 * 
+		 */
+
+		char unidadDeMedida;
+
+		unidadDeMedida = 'c';
+
+		Boolean b = true;
+		Double valor;
+		
+		valor=0.0;
+
+		Integer tipoDeFormula;
+
+		Scanner sc = new Scanner(System.in);
+
+		while (b) {
+
+			System.out.print("De ");
+			switch (unidadDeMedida) {
+			case 'c' -> System.out.print("Celsius");
+			case 'f' -> System.out.print("Fehrenheit");
+			case 'k' -> System.out.print("kelvin");
+			case 'r' -> System.out.print("Rankine");
+			case 'u' -> System.out.print("Reaumur");
+			}
+			System.out.println(" a ...");
+
+			switch (unidadDeMedida) {
+			case 'c' -> {
+
+				System.out.println("""
+						1. Fahrenheit,
+						2. Kelvin,
+						3. Rankine,
+						4. Réaumur
+						""");
+
+				tipoDeFormula = sc.nextInt();
+				switch (tipoDeFormula) {
+				case 1 -> {
+					
+					valor = (( 9 * valor ) / 5) + 32 ;
+					unidadDeMedida='f';
+				}
+				case 2 -> {
+					
+					valor = valor + 273.15 ;
+					unidadDeMedida='k';
+				}
+				case 3 -> {
+
+					//
+					valor = valor + 273.15 ;
+					unidadDeMedida='k';
+				}
+				case 4 -> {
+
+				}
+
+				}
+
+			}
+			case 'f' -> {
+
+			}
+			case 'k' -> {
+
+			}
+			case 'r' -> {
+
+			}
+			case 'u' -> {
+
+			}
+
+			}
+
+		}
+		sc.close();
+	}
+}
