@@ -1,0 +1,17 @@
+package demo;
+
+public class PiedraPapelYTijera {
+
+	public static void main(String[] args) {
+		
+
+		//hubo empate se lanza de nuevo
+		//el primero que complete 2 ganadas GANA y se termina el juego
+		
+		//no importa el numerod de rondas
+		
+		
+		
+	}
+
+}

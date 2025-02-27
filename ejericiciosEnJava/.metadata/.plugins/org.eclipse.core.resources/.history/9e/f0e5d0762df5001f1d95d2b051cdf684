@@ -1,0 +1,28 @@
+package demo;
+
+import java.util.Scanner;
+
+public class PiedraPapelYTijera {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		Integer contadorVictorias;
+		Integer resultadoJugador1,resultadoJugador2;
+		
+		contadorVictorias=0;
+		while ( contadorVictorias != 2 ) {
+			
+			
+			resultadoJugador1=(int) ( Math.random()*3 );
+			
+			System.out.println(resultadoJugador1);
+			
+			
+		}
+			
+		sc.close();
+	}
+
+}
